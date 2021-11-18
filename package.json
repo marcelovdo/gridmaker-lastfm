@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/marcelovdo/gridmaker-lastfm/issues"
   },
-  "homepage": "https://github.com/marcelovdo/gridmaker-lastfm#readme"
+  "homepage": "https://github.com/marcelovdo/gridmaker-lastfm#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0"
+  }
 }
