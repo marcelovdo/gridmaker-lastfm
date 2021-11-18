@@ -1,0 +1,19 @@
+{
+  "name": "gridmaker-lastfm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelovdo/gridmaker-lastfm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelovdo/gridmaker-lastfm/issues"
+  },
+  "homepage": "https://github.com/marcelovdo/gridmaker-lastfm#readme"
+}
