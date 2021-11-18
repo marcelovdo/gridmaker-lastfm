@@ -1,12 +1,26 @@
 const axios = require('axios');
-const dotenv = require('dotenv');
+
+require('dotenv').config()
+const env = process.env;
+
+const rootURL = 'http://ws.audioscrobbler.com/2.0/';
 
 const getAlbums = async () => {
-    const params = {
-        method: 'user.getweeklyalbumchart',
-        user: 'marcelovalentim',
-        api_key: ,
+    const userName = 'marcelovalentim';
+    const period = '12month';
+    const searchLimit = 20;
+    const config = { params: {
+        method: 'user.gettopalbums',
+        user: userName,
+        api_key: env.API_KEY,
+        period,
+        limit: searchLimit,
         format: 'json'
-    };
-    axios.get('http://ws.audioscrobbler.com/2.0/');
+    }};
+    const res = await axios.get(rootURL, config);
+    for (let album of res.data.topalbums.album) {
+        console.log(`Album: ${album.name} | Artist: ${album.artist.name} | Playcount: ${album.playcount}`);
+    }
 };
+
+getAlbums();
